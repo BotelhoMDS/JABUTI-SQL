@@ -7,7 +7,7 @@ Benchmark brasileiro para avaliação de sistemas *Text-to-SQL*, construído a p
 📄 Paper: *[link do paper SBBD/DSW 2026]*
 📦 Dados completos: [Hugging Face — BotelhoMS/JABUTI-SQL](https://huggingface.co/datasets/BotelhoMS/JABUTI-SQL)
 🗄️ DOI (Zenodo): [10.5281/zenodo.21048827](https://doi.org/10.5281/zenodo.21048827)
-📜 Licença: CC BY 4.0
+📜 Licença: CC BY 4.0 (ver [`LICENSE`](./LICENSE))
 
 ---
 
@@ -16,7 +16,7 @@ Benchmark brasileiro para avaliação de sistemas *Text-to-SQL*, construído a p
 - [Visão geral](#visão-geral)
 - [Estrutura do repositório](#estrutura-do-repositório)
 - [Como restaurar o banco](#como-restaurar-o-banco)
-- [Esquema relacional e volumetria](#esquema-relacional-e-volumetria)
+- [Esquema relacional e dicionário de dados](#esquema-relacional-e-dicionário-de-dados)
 - [Pares pergunta/SQL](#pares-perguntasql)
 - [Limitações conhecidas](#limitações-conhecidas)
 - [Como citar](#como-citar)
@@ -39,8 +39,13 @@ O conjunto inclui **69 pares pergunta/SQL** em português, anotados manualmente,
 
 ```
 .
-├── ddl/         # scripts de criação do esquema relacional (15 tabelas)
-├── questoes/    # pares pergunta/SQL, com persona, dificuldade e categoria temática
+├── ddl/                     # scripts de criação do esquema relacional (15 tabelas)
+├── docs/
+│   ├── data-dictionary.md   # dicionário de dados completo (coluna a coluna)
+│   └── schema.png           # diagrama ER do esquema relacional
+├── questoes/                # pares pergunta/SQL, com persona, dificuldade e categoria temática
+├── LICENSE                  # CC BY 4.0
+├── CITATION.cff              # citação estruturada (habilita "Cite this repository" no GitHub)
 └── README.md
 ```
 
@@ -61,7 +66,7 @@ psql -U postgres -c "CREATE DATABASE jabuti_sql;"
 psql -U postgres -d jabuti_sql < dump.sql
 ```
 
-## Esquema relacional e volumetria
+## Esquema relacional e dicionário de dados
 
 15 tabelas, entre 2 e 33 colunas, de 5 registros (Região do Brasil) a mais de 143 milhões (Instituição Estoca Produto):
 
@@ -83,7 +88,7 @@ psql -U postgres -d jabuti_sql < dump.sql
 | Mantenedora Compra Produto | 14 | 26.215 |
 | Instituição Estoca Produto | 11 | 143.009.579 |
 
-*(diagrama do esquema — ver `docs/schema.png`, a adicionar)*
+Diagrama completo em [`docs/schema.png`](./docs/schema.png). Descrição coluna a coluna, tipos, chaves estrangeiras e valores categóricos em [`docs/data-dictionary.md`](./docs/data-dictionary.md) — inclui também as fontes de origem de cada tabela e as limitações de nulos entre bases.
 
 ## Pares pergunta/SQL
 
@@ -103,11 +108,13 @@ Mais exemplos (médio e difícil) e a lista completa estão em [`questoes/`](./q
 
 ## Limitações conhecidas
 
-- **Valores nulos**: até 44,48% em `instituicao_estoca_produto`, 28,96% em `instituicao`, 13,27% em `endereco`. Preservados intencionalmente para refletir a qualidade real dos dados do SUS.
+- **Valores nulos**: até 44,48% em `instituicao_estoca_produto`, 28,96% em `instituicao`, 13,27% em `endereco`. Preservados intencionalmente para refletir a qualidade real dos dados do SUS. Detalhes por tabela em [`docs/data-dictionary.md`](./docs/data-dictionary.md).
 - **Registros sem região associada**: 47,66% dos registros de estoque não têm vínculo geográfico, por dependerem do preenchimento consistente do código CNES pelas instituições.
 - **Escala**: 69 pares é modesto frente a Spider (8.659) e BIRD (12.751) — o benchmark prioriza realismo e representatividade sobre volume.
 
 ## Como citar
+
+O GitHub gera a citação automaticamente a partir do [`CITATION.cff`](./CITATION.cff) — veja o botão **"Cite this repository"** na barra lateral do repositório. BibTeX:
 
 ```bibtex
 @inproceedings{botelho2026jabuti,
