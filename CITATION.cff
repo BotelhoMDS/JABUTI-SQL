@@ -1,0 +1,93 @@
+cff-version: 1.2.0
+message: "Se você utilizar o JABUTI-SQL, por favor cite conforme abaixo."
+title: "JABUTI-SQL: Joint Annotated Benchmark for User-centric Text-to-SQL In Real Health Data"
+version: 1.0.0
+date-released: "2026-06-30"
+url: "https://github.com/BotelhoMDS/JABUTI-SQL"
+repository-code: "https://github.com/BotelhoMDS/JABUTI-SQL"
+doi: 10.5281/zenodo.21048827
+license: CC-BY-4.0
+keywords:
+  - text-to-sql
+  - benchmark
+  - portuguese
+  - datasus
+  - saude-publica
+  - nlp
+authors:
+  - given-names: Matheus
+    family-names: Botelho
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+  - given-names: Guilherme
+    family-names: Fonseca
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+  - given-names: "Lucas R."
+    family-names: Silva
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+  - given-names: "Rodrigo M."
+    family-names: Gonçalves
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+  - given-names: Yago
+    family-names: Lobato
+    affiliation: "Universidade Federal do Amazonas (UFAM)"
+  - given-names: "Gustavo A."
+    family-names: Ribeiro
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+  - given-names: "Eduardo C."
+    family-names: "de Camara"
+    affiliation: "Universidade Federal do Amazonas (UFAM)"
+  - given-names: "Jaide F. C."
+    family-names: Zardin
+    affiliation: "Universidade Federal do Amazonas (UFAM)"
+  - given-names: Pedro
+    family-names: Calais
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+  - given-names: "Emerson A."
+    family-names: Simões
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+  - given-names: Allan
+    family-names: Sene
+    affiliation: "Dadosfera Brasil"
+  - given-names: "Julio C. S."
+    family-names: Reis
+    affiliation: "Universidade Federal de Viçosa (UFV)"
+  - given-names: Altigran
+    family-names: "da Silva"
+    affiliation: "Universidade Federal do Amazonas (UFAM)"
+  - given-names: "Marcos André"
+    family-names: Gonçalves
+    affiliation: "Universidade Federal de Minas Gerais (UFMG)"
+preferred-citation:
+  type: conference-paper
+  title: "JABUTI-SQL: Um Benchmark em Português para Avaliação de Abordagens Text-to-SQL em Cenários Reais"
+  collection-title: "Anais do Simpósio Brasileiro de Banco de Dados (SBBD) — Dataset Showcase Workshop"
+  year: 2026
+  authors:
+    - given-names: Matheus
+      family-names: Botelho
+    - given-names: Guilherme
+      family-names: Fonseca
+    - given-names: "Lucas R."
+      family-names: Silva
+    - given-names: "Rodrigo M."
+      family-names: Gonçalves
+    - given-names: Yago
+      family-names: Lobato
+    - given-names: "Gustavo A."
+      family-names: Ribeiro
+    - given-names: "Eduardo C."
+      family-names: "de Camara"
+    - given-names: "Jaide F. C."
+      family-names: Zardin
+    - given-names: Pedro
+      family-names: Calais
+    - given-names: "Emerson A."
+      family-names: Simões
+    - given-names: Allan
+      family-names: Sene
+    - given-names: "Julio C. S."
+      family-names: Reis
+    - given-names: Altigran
+      family-names: "da Silva"
+    - given-names: "Marcos André"
+      family-names: Gonçalves
