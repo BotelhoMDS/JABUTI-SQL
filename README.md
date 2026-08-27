@@ -2,7 +2,7 @@
 
 **J**oint **A**nnotated **B**enchmark for **U**ser-centric **T**ext-to-SQL **I**n Real Health Data
 
-Benchmark brasileiro para avaliação de sistemas *Text-to-SQL*, construído a partir da integração de cinco bases públicas reais do DATASUS (Banco de Preços em Saúde, Hospitais e Leitos, BNAFAR, CNES e divisões de Macrorregião/Região de Saúde). Diferente de benchmarks sintéticos como Spider e BIRD, o JABUTI-SQL preserva características de ambientes governamentais reais — dados incompletos, ambiguidades semânticas e relações complexas entre múltiplas fontes.
+Benchmark brasileiro para avaliação de sistemas *Text-to-SQL*, construído a partir da integração de cinco bases públicas reais do DATASUS (Banco de Preços em Saúde, Hospitais e Leitos, BNAFAR, CNES e divisões de Macrorregião/Região de Saúde). Diferente de benchmarks sintéticos como Spider e BIRD, o JABUTI-SQL preserva características de ambientes governamentais reais, dados incompletos, ambiguidades semânticas e relações complexas entre múltiplas fontes.
 
 📄 Paper: *[link do paper SBBD/DSW 2026]*
 📦 Dados completos: [Hugging Face — BotelhoMS/JABUTI-SQL](https://huggingface.co/datasets/BotelhoMS/JABUTI-SQL)
@@ -25,7 +25,7 @@ Benchmark brasileiro para avaliação de sistemas *Text-to-SQL*, construído a p
 
 ## Visão geral
 
-O benchmark combina três domínios principais — gastos públicos e compras (BPS), infraestrutura hospitalar (Hospitais e Leitos) e assistência farmacêutica (BNAFAR) — enriquecidos com dados geográficos e administrativos (CNES, Macrorregião/Região de Saúde). O recorte temporal é o ano de 2025.
+O benchmark combina três domínios principais, gastos públicos e compras (BPS), infraestrutura hospitalar (Hospitais e Leitos) e assistência farmacêutica (BNAFAR), enriquecidos com dados geográficos e administrativos (CNES, Macrorregião/Região de Saúde). O recorte temporal é o ano de 2025.
 
 O conjunto inclui **69 pares pergunta/SQL** em português, anotados manualmente, distribuídos em:
 
@@ -41,11 +41,9 @@ O conjunto inclui **69 pares pergunta/SQL** em português, anotados manualmente,
 .
 ├── ddl/                     # scripts de criação do esquema relacional (15 tabelas)
 ├── docs/
-│   ├── data-dictionary.md   # dicionário de dados completo (coluna a coluna)
-│   └── schema.png           # diagrama ER do esquema relacional
+│   ├── dicionario_dados_Jabuti.pdf   # dicionário de dados completo 
 ├── questoes/                # pares pergunta/SQL, com persona, dificuldade e categoria temática
-├── LICENSE                  # CC BY 4.0
-├── CITATION.cff              # citação estruturada (habilita "Cite this repository" no GitHub)
+├── CITATION.cff             
 └── README.md
 ```
 
@@ -88,7 +86,6 @@ psql -U postgres -d jabuti_sql < dump.sql
 | Mantenedora Compra Produto | 14 | 26.215 |
 | Instituição Estoca Produto | 11 | 143.009.579 |
 
-Diagrama completo em [`docs/schema.png`](./docs/schema.png). Descrição coluna a coluna, tipos, chaves estrangeiras e valores categóricos em [`docs/data-dictionary.md`](./docs/data-dictionary.md) — inclui também as fontes de origem de cada tabela e as limitações de nulos entre bases.
 
 ## Pares pergunta/SQL
 
