@@ -2,6 +2,10 @@
 
 **J**oint **A**nnotated **B**enchmark for **U**ser-centric **T**ext-to-SQL **I**n Real Health Data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21048827.svg)](https://doi.org/10.5281/zenodo.21048827)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![🤗 Datasets](https://img.shields.io/badge/🤗%20Datasets-BotelhoMS%2FJABUTI--SQL-yellow)](https://huggingface.co/datasets/BotelhoMS/JABUTI-SQL)
+
 Benchmark brasileiro para avaliação de sistemas *Text-to-SQL*, construído a partir da integração de cinco bases públicas reais do DATASUS (Banco de Preços em Saúde, Hospitais e Leitos, BNAFAR, CNES e divisões de Macrorregião/Região de Saúde). Diferente de benchmarks sintéticos como Spider e BIRD, o JABUTI-SQL preserva características de ambientes governamentais reais, dados incompletos, ambiguidades semânticas e relações complexas entre múltiplas fontes.
 
 📄 Paper: *[link do paper SBBD/DSW 2026]*
