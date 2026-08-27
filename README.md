@@ -47,7 +47,6 @@ O conjunto inclui **69 pares pergunta/SQL** em português, anotados manualmente,
 └── README.md
 ```
 
-> ⚠️ *Preencher: formato dos arquivos em `questoes/` (JSON/CSV), campos disponíveis por registro (pergunta, SQL, persona, dificuldade, categoria), e se `ddl/` contém apenas o schema ou também dados de seed.*
 
 ## Como restaurar o banco
 
