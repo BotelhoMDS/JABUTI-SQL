@@ -106,7 +106,7 @@ Mais exemplos (médio e difícil) e a lista completa estão em [`questoes/`](./q
 
 - **Valores nulos**: até 44,48% em `instituicao_estoca_produto`, 28,96% em `instituicao`, 13,27% em `endereco`. Preservados intencionalmente para refletir a qualidade real dos dados do SUS. Detalhes por tabela em [`docs/data-dictionary.md`](./docs/data-dictionary.md).
 - **Registros sem região associada**: 47,66% dos registros de estoque não têm vínculo geográfico, por dependerem do preenchimento consistente do código CNES pelas instituições.
-- **Escala**: 69 pares é modesto frente a Spider (8.659) e BIRD (12.751) — o benchmark prioriza realismo e representatividade sobre volume.
+- **Escala**: 69 pares é modesto frente ao Spider (8.659) e BIRD (12.751), o benchmark prioriza realismo e representatividade sobre volume.
 
 ## Como citar
 
